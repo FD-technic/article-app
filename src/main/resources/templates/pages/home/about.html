@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+<body>
+    <header th:replace="~{fragments/layout.html :: header}"></header>
+    <article>
+        <header>
+            <h1>O mně</h1>
+        </header>
+
+        <section>
+            <img th:src="@{/images/avatar.png}" class="avatar" alt="Petrův avatar" />
+            <p>
+                Vítejte na mém prvním webu. Jmenuji se Petr a je mi 51 let.
+            </p>
+            <p>Vrhnul jsem se do učení programování jazyků Java, Javascript. Používám frameworky Spring boot, React, Bootstrap. </p>
+
+            <p>Nyní již zvládám jednoduché webové aplikace.</p>
+
+            <p>
+                Mou velkou zálibou jsou počítače, ESP32, Arduino a hlavně <strong>programování</strong>!
+            </p>
+            <p>
+                Mezi další záliby patří četba, fotografování a procházky přírodou.
+            </p>
+
+            <div class="cistic"></div>
+        </section>
+    </article>
+
+
+    <footer th:replace="~{fragments/layout.html :: footer}"></footer>
+</body>
+</html>
