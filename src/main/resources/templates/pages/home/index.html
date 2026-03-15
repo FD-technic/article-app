@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/layout.html :: head}"></head>
+<head th:replace="~{fragments/layout.html :: head('Úvod')}"></head>
 <body>
     <header th:replace="~{fragments/layout.html :: header}"></header>
     <article>
-        <header>
-            <h1>Blogovací aplikace</h1>
-        </header>
-        <section>
-            <p>
-                Na těchto stránkách najdete jednoduchou webovou aplikaci na zveřejňování myšlenek a názorů.
-                Postupně ji mám v úmyslu rozšiřovat a vylepšovat.
-            </p>
-            <p>
-                petr@fdweb.cz / 123456
-            </p>
+        <section class="row">
+            <div class="col-md-7">
+                <header>
+                    <h1>Blogovací aplikace</h1>
+                </header>
+                <p>
+                    Na těchto stránkách najdete jednoduchou webovou aplikaci na zveřejňování myšlenek a názorů.
+                    Postupně ji mám v úmyslu rozšiřovat a vylepšovat.
+                </p>
+                <p>
+                    petr@fdweb.cz / 123456
+                </p>
+            </div>
+            <div  class="col-md-5">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                    <source th:src="@{/media/logo.webm}" type="video/webm">
+                </video>
+            </div>
         </section>
-
     </article>
-
 
     <footer th:replace="~{fragments/layout.html :: footer}"></footer>
 </body>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:fragment="head">
+<head th:fragment="head(title)">
     <meta charset="UTF-8">
-    <meta name="description" content="Osobní portfolio programátora HoBiho." />
-    <meta name="keywords" content="portfolio, programátor, HoBi" />
-    <meta name="author" content="HoBi" />
-    <title>Moje první webová stránka</title>
+    <meta name="description" content="Aplikace pro poznámky a nápady." />
+    <meta name="keywords" content="web-aplikace, blog, FDWeb" />
+    <meta name="author" content="FDWeb" />
+    <title th:text="${title}">Defaultní titulek</title>
 
     <!-- Odkazy na potřebné styly -->
     <link rel="stylesheet" th:href="@{/styles/lightbox.min.css}" type="text/css" />
@@ -25,29 +25,31 @@
     </script>
 </head>
 <body>
-<header th:fragment="header">
-    <div id="logo">
-        <h1>Pedro<span>Technic</span></h1>
-        <small>webdeveloper</small>
-    </div>
-    <nav>
-        <ul>
-            <li><a th:href="@{/}">Domů</a></li>
-            <li><a th:href="@{/about}">O mně</a></li>
-            <li><a th:href="@{/articles}">Články</a></li>
-            <li sec:authorize="isAnonymous()"><a th:href="@{/account/login}">Přihlásit</a></li>
-            <li sec:authorize="isAnonymous()"><a th:href="@{/account/register}">Registrovat</a></li>
-            <li>
-                <form method="post" th:action="@{/account/logout}">
-                    <button class="btn text-white" sec:authorize="isAuthenticated()">Odhlásit se</button>
-                </form>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <header th:fragment="header">
+        <div id="logo">
+            <h1>FD<span>Web</span></h1>
+            <small>Java Web Developer</small>
+        </div>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Domů</a></li>
+                <li><a th:href="@{/about}">O mně</a></li>
+                <li><a th:href="@{/articles}">Články</a></li>
+                <li sec:authorize="isAnonymous()"><a th:href="@{/account/login}">Přihlásit</a></li>
+                <li sec:authorize="isAnonymous()"><a th:href="@{/account/register}">Registrovat</a></li>
+                <li>
+                    <form method="post" th:action="@{/account/logout}">
+                        <button class="btn text-white" sec:authorize="isAuthenticated()">Odhlásit se</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<footer th:fragment="footer">
-    FR-D2 &copy;2026 za přispění <a href="https://fdtech.cz">FDTech.cz</a>
-</footer>
+    <footer th:fragment="footer">
+        <span class="foot-primary">FR</span>-<span class="foot-accent">D2</span>
+            &copy;2026 pro
+        <a href="https://fdtech.cz">FDTech.cz</a>
+    </footer>
 </body>
 </html>
