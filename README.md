@@ -1,0 +1,2 @@
+# AppBlog
+Jednoduchá blogovací aplikace
