@@ -1,50 +1,90 @@
-\# Spring Boot Template – 90s Workflow
+# Article Publishing App
 
+Simple web application for publishing articles.
 
+The project was created as a learning project while studying web application development with **Java** and **Spring Boot**.
 
-Minimalistická a bezpečná šablona pro Spring Boot projekty  
+## Features
 
-(Maven Wrapper, startery, žádné ruční dependency, žádný IDE bordel).
+* create and publish articles
+* display a list of published articles
+* view article details
+* simple server-side rendering using Thymeleaf
 
+## Technologies
 
+* Java
+* Spring Boot
+* Thymeleaf
+* MySQL
+* HTML
+* CSS
 
----
+## Project Structure
 
+```
+src
+ └─ main
+     ├─ java
+     │   └─ controllers
+     ├─ resources
+     │   ├─ templates
+     │   └─ static
+```
 
+* **templates** – Thymeleaf HTML templates
+* **static** – CSS and other static resources
 
-\## Co tahle template řeší za tebe
+## Database
 
-\- ✅ Spring Boot parent (BOM řízení verzí)
+The application uses a MySQL database for storing articles.
 
-\- ✅ Maven Wrapper (bez PATH, bez instalace)
+Typical configuration in application.properties:
 
-\- ✅ čistá struktura projektu
+spring.datasource.url=jdbc:mysql://localhost:3306/article_app
+spring.datasource.username=root
+spring.datasource.password=your_password
 
-\- ✅ připravené testy
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 
-\- ✅ žádné CVE pasti (logback bez custom configu)
+## Running the application
 
-\- ✅ IDE-agnostická (IntelliJ / VS Code / Eclipse)
+1. Clone the repository
 
+```
+git clone https://github.com/FD-technic/article-app
+```
 
+2. Go to the project directory
 
----
+```
+cd article-app
+```
 
+3. Run the application
 
+```
+./mvnw spring-boot:run
+```
 
-\## Workflow: nový projekt za ~90 sekund 🚀
+or run the main class from your IDE.
 
+4. Open the browser
 
+```
+http://localhost:8080
+```
 
-\### 1️⃣ Zkopíruj template
+## Purpose
 
-```bash
+This project serves mainly as a **learning example** for working with:
 
-cp -r spring-boot-template muj-novy-projekt
+* Spring Boot controllers
+* Thymeleaf templates
+* MySQL database
+* basic web application structure
 
-cd muj-novy-projekt
+## License
 
-
-
-
-
+MIT License
