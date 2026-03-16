@@ -11,6 +11,8 @@ The project was created as a learning project while studying web application dev
 * view article details
 * simple server-side rendering using Thymeleaf
 
+## Screenshot
+![App screenshot](docs/screenshot_01.png)
 ## Technologies
 
 * Java
